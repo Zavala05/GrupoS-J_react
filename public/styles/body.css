@@ -1,0 +1,23 @@
+.main{
+    height: 100vh;
+    /* --- ¡NUEVA IMAGEN INDUSTRIAL POTENTE! --- */
+    background: linear-gradient(rgba(15, 32, 39, 0.205), rgba(32, 58, 67, 0.9)), url('Gemini_Generated_Image_3q71df3q71df3q71.png') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+
+}
+
+h2{
+    width: 530px;
+    color: white;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    height: 300px;
+    font-size: 45px;
+
+}
