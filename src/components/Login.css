@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.auth-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+      rgba(10, 10, 10, 0.85),
+      rgba(10, 10, 10, 0.95)
+    ),
+    url('/industrial-bg.jpg'); /* usa tu misma imagen del hero */
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* CAJA LOGIN */
+.access-panel {
+  width: 360px;
+  padding: 2.5rem;
+
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 204, 0, 0.2);
+
+  box-shadow: 
+    0 0 0 1px rgba(255, 204, 0, 0.1),
+    0 10px 40px rgba(0,0,0,0.8);
+
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* LINEA INDUSTRIAL SUPERIOR */
+.access-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #ffcc00;
+}
+
+/* TITULO */
+.access-panel h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* FORM */
+.input-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.input-wrapper label {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* INPUTS */
+.input-wrapper input {
+  width: 100%;
+  padding: 10px;
+
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #333;
+
+  color: white;
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+/* EFECTO INDUSTRIAL */
+.input-wrapper input:focus {
+  border-bottom: 2px solid #ffcc00;
+  box-shadow: 0 5px 10px rgba(255, 204, 0, 0.2);
+}
+
+/* PLACEHOLDER */
+.input-wrapper input::placeholder {
+  color: #ffffffcf;
+}
+
+/* MENSAJES */
+.alert-danger {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.alert-success {
+  color: #ffcc00;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* BOTÓN */
+.submit-action {
+  width: 100%;
+  padding: 12px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #ffcc00;
+  color: #111;
+
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.submit-action:hover {
+  background: #ffd633;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 204, 0, 0.4);
+}
+
+/* CLICK */
+.submit-action:active {
+  transform: scale(0.97);
+}

@@ -1,0 +1,148 @@
+.category-products-container {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto 60px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-header-image {
+  flex: 0 0 300px;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.category-header-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.category-header-content {
+  flex: 1;
+}
+
+.category-header-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.category-description {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.category-products-section {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.category-products-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  font-size: 18px;
+  color: #666666;
+}
+
+.error-message {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.no-products {
+  background-color: #f0f0f0;
+  color: #666666;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .category-header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .category-header-image {
+    flex: 0 0 250px;
+  }
+
+  .category-header-image img {
+    height: 250px;
+  }
+
+  .category-header-content h1 {
+    font-size: 28px;
+  }
+
+  .category-products-section h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-products-container {
+    padding: 20px 10px;
+  }
+
+  .category-header {
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+
+  .category-header-image {
+    flex: 0 0 200px;
+  }
+
+  .category-header-image img {
+    height: 200px;
+  }
+
+  .category-header-content h1 {
+    font-size: 22px;
+  }
+
+  .category-description {
+    font-size: 14px;
+  }
+}

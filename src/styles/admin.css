@@ -1,0 +1,543 @@
+/* CONTENEDOR GENERAL */
+.admin-container {
+  min-height: 100vh;
+  padding: 2rem;
+
+  background: linear-gradient(
+    rgba(167, 167, 167, 0.95),
+    rgb(85, 82, 82)
+  );
+
+  color: white;
+}
+
+/* HEADER */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(255, 204, 0, 0.2);
+}
+
+.admin-header h1 {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* BOTÓN LOGOUT */
+.logout-btn {
+  padding: 10px 18px;
+  background: #ffcc00ad;
+  color: #ffffff;
+
+  border: 1px solid #ffcc00;
+  border-radius: 6px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: white;
+  color: #111;
+  border: none;
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+}
+
+/* CONTENIDO */
+.admin-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.admin-content p {
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+/* SECCIÓN CATEGORÍAS */
+.Categories-container {
+  background: rgba(20, 20, 20, 0.85);
+  padding: 1.5rem;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 204, 0, 0.15);
+  margin-bottom: 2rem;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.Categories-container h2 {
+  margin-bottom: 1rem;
+  border-left: 4px solid #ffcc00;
+  padding-left: 10px;
+}
+
+/* TABLA */
+.categories-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+/* HEADER TABLA */
+.categories-table thead {
+  background: rgba(255, 204, 0, 0.1);
+}
+
+.categories-table th {
+  text-align: left;
+  padding: 12px;
+  color: #ffcc00;
+  font-weight: 500;
+}
+
+/* FILAS */
+.categories-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* HOVER FILA */
+.categories-table tbody tr:hover {
+  background: rgba(255, 204, 0, 0.05);
+  transition: 0.2s;
+}
+
+/* IMAGEN */
+.product-table__thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* BOTÓN ELIMINAR */
+.categories-table button {
+  padding: 6px 12px;
+
+  background: transparent;
+  color: #ff4d4d;
+
+  border: 1px solid #ff4d4d;
+  border-radius: 4px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categories-table button:hover {
+  background: #ff4d4d;
+  color: white;
+  box-shadow: 0 5px 10px rgba(255, 77, 77, 0.3);
+}
+
+/* MENSAJE VACÍO */
+.product-table_empty {
+  text-align: center;
+  color: #777;
+  margin-top: 1rem;
+}
+
+
+/* TARJETAS REUTILIZABLES (categorias, marcas, productos) */
+.admin-card {
+  background: rgba(20, 20, 20, 0.85);
+  padding: 1.5rem;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 204, 0, 0.15);
+  margin-bottom: 2rem;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  position: relative;
+}
+
+/* LINEA SUPERIOR (detalle industrial) */
+.admin-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ffcc00;
+}
+
+/* TITULOS */
+.admin-card h2 {
+  margin-bottom: 1rem;
+  padding-left: 10px;
+  border-left: 4px solid #ffcc00;
+}
+
+/* TABLAS GENERALES (REUTILIZABLE) */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+/* HEADERS */
+.admin-table thead {
+  background: rgba(255, 204, 0, 0.08);
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 12px;
+  color: #ffcc00;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* FILAS */
+.admin-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* HOVER */
+.admin-table tbody tr:hover {
+  background: rgba(255, 204, 0, 0.04);
+  transition: 0.2s;
+}
+
+/* BOTONES GENERALES */
+.admin-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.85rem;
+}
+
+/* DELETE */
+.admin-btn.delete {
+  color: #ff4d4d;
+  border-color: #ff4d4d;
+  background: transparent;
+}
+
+.admin-btn.delete:hover {
+  background: #ff4d4d;
+  color: white;
+  box-shadow: 0 5px 10px rgba(255, 77, 77, 0.3);
+}
+
+/* IMAGEN */
+.product-table__thumb {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* SCROLL BONITO PARA TABLAS GRANDES */
+.admin-card {
+  overflow-x: auto;
+}
+
+/* ESTADO CARGANDO */
+.admin-loading {
+  text-align: center;
+  color: #aaa;
+  padding: 2rem;
+}
+
+/* MENSAJE VACÍO */
+.product-table_empty {
+  text-align: center;
+  color: #777;
+  margin-top: 1rem;
+}
+
+
+/* ===== ESTILOS PARA MODALES ===== */
+
+/* OVERLAY DEL MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* CONTENEDOR DEL MODAL */
+.modal-content {
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid rgba(255, 204, 0, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* HEADER DEL MODAL */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 204, 0, 0.2);
+}
+
+.modal-header h3 {
+  color: #ffcc00;
+  font-size: 1.3rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* BOTÓN CERRAR */
+.modal-close {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  color: #ff0000;
+  transform: scale(1.1);
+}
+
+/* FORMULARIO */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* GRUPO DE FORMULARIO */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #ffcc00;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* INPUTS Y SELECTS */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background: rgba(50, 50, 50, 0.8);
+  border: 1px solid rgba(255, 204, 0, 0.2);
+  color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  background: rgba(60, 60, 60, 0.9);
+  border-color: #ffcc00;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* TEXTAREA */
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* FILA (DOS COLUMNAS) */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}
+
+/* OPCIONES DE SELECTS */
+.form-group select option {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+/* ACCIONES DEL MODAL */
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 204, 0, 0.1);
+  justify-content: flex-end;
+}
+
+/* BOTONES DE ACCIÓN */
+.btn-cancel,
+.btn-submit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-cancel {
+  background: transparent;
+  color: #999;
+  border: 1px solid #999;
+}
+
+.btn-cancel:hover {
+  background: rgba(150, 150, 150, 0.1);
+  color: #ccc;
+  border-color: #ccc;
+}
+
+.btn-submit {
+  background: #ffcc00;
+  color: #1a1a1a;
+  border: 1px solid #ffcc00;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: #ffdd33;
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* BOTÓN AGREGAR (en la tarjeta) */
+.admin-btn.add {
+  background: #ffcc00;
+  color: #1a1a1a;
+  border-color: #ffcc00;
+  font-weight: 600;
+  padding: 8px 16px;
+}
+
+.admin-btn.add:hover {
+  background: #ffdd33;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+}
+
+/* HEADER CON BOTÓN AGREGAR */
+.admin-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.admin-card__header h2 {
+  margin: 0;
+  flex: 1;
+}
+
+/* HEADER PARA CATEGORÍAS */
+.categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.categories-header h2 {
+  margin: 0;
+  flex: 1;
+  border-left: 4px solid #ffcc00;
+  padding-left: 10px;
+}
+
+/* VISTA PREVIA DE IMAGEN */
+.image-preview {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 204, 0, 0.3);
+  background: rgba(50, 50, 50, 0.5);
+  padding: 8px;
+}
+
+.image-preview img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+}
