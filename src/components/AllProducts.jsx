@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import supabase from '../supabase';
 
 export default function AllProducts() {
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
