@@ -23,6 +23,12 @@
   border-bottom: 1px solid rgba(255, 204, 0, 0.2);
 }
 
+.admin-header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .admin-header h1 {
   letter-spacing: 2px;
   font-weight: 600;
@@ -252,6 +258,20 @@
   text-align: center;
   color: #aaa;
   padding: 2rem;
+}
+
+/* RESPONSIVE PARA PANTALLAS PEQUEÑAS */
+@media (max-width: 440px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-header-actions {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 /* MENSAJE VACÍO */

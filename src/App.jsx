@@ -15,6 +15,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Admin from './components/Admin';
+import ChangePassword from './components/ChangePassword';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function HomePage() {
@@ -72,6 +73,7 @@ export default function App() {
       <Route path="/products" element={<AllProductsPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/admin" element={<ProtectedRoute element={<Admin />} />} />
+      <Route path="/admin/change-password" element={<ProtectedRoute element={<ChangePassword />} />} />
     </Routes>
   );
 }

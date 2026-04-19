@@ -173,8 +173,18 @@ export default function Admin() {
   return (
     <div className="admin-container">
       <div className="admin-header">
-        <h1>Panel Administrador</h1>
-        <button onClick={handleLogout} className="logout-btn">Cerrar Sesión</button>
+        <div>
+          <h1>Panel Administrador</h1>
+          <p style={{ marginTop: '0.5rem', color: '#ccc' }}>
+            Aquí puedes gestionar tus productos, marcas, categorías y la contraseña de acceso.
+          </p>
+        </div>
+        <div className="admin-header-actions">
+          <button className="admin-btn" onClick={() => navigate('/admin/change-password')}>
+            Cambiar Contraseña
+          </button>
+          <button onClick={handleLogout} className="logout-btn">Cerrar Sesión</button>
+        </div>
       </div>
       <div className="admin-content">
         <p>Bienvenido al Panel Administrador, aquí podrás gestionar el contenido de tus productos, marcas y categorias.</p>
